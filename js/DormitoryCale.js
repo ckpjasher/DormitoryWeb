@@ -23,7 +23,7 @@ function timeTable() {
             <title>课程表</title>
           </head>
           <body>
-            <img src="images/timetable.png" alt="课程表" />
+            <img src="images/timetable.webp" alt="课程表" />
           </body>
         </html>
     `;
@@ -38,7 +38,7 @@ function scoolMap() {
             <title>校园图</title>
           </head>
           <body>
-            <img src="images/scoolmap.jpg" alt="校园图" />
+            <img src="images/scoolmap.webp" alt="校园图" />
           </body>
         </html>
     `;
@@ -53,7 +53,7 @@ function ASCIITable() {
             <title>ASCII表</title>
           </head>
           <body>
-            <img src="images/ASCIITable.png" alt="ASCII表" />
+            <img src="images/ASCIITable.webp" alt="ASCII表" />
           </body>
         </html>
     `;
@@ -68,7 +68,7 @@ function SchoolCalendar() {
             <title>校日历</title>
           </head>
           <body>
-            <img src="images/SchoolCalendar.jpg" alt="校日历" />
+            <img src="images/SchoolCalendar.webp" alt="校日历" />
           </body>
         </html>
     `;
