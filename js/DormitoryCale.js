@@ -23,7 +23,7 @@ function timeTable() {
             <title>课程表</title>
           </head>
           <body>
-            <img src="images/timetable.webp" alt="课程表" />
+            <img src="images/timetable.png" alt="课程表" />
           </body>
         </html>
     `;
@@ -53,7 +53,7 @@ function ASCIITable() {
             <title>ASCII表</title>
           </head>
           <body>
-            <img src="images/ASCIITable.webp" alt="ASCII表" />
+            <img src="images/ASCIITable.png" alt="ASCII表" />
           </body>
         </html>
     `;
