@@ -1,0 +1,9 @@
+ul li {
+    float: left;
+    list-style-type: none;
+}
+
+.page {
+    background: url(../images/navBackground.webp) no-repeat;
+    background-size: cover;
+}

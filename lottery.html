@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>抽奖页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #countdown {
+            margin-top: 50px;
+            font-size: 100px;
+            text-align: center;
+        }
+
+        #winners {
+            margin-top: 50px;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        button {
+            margin-top: 50px;
+            font-size: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            background-color: #4CAF50;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="countdown"></div>
+    <div id="winners"></div>
+
+    <script>
+        function startCountdown(callback) {
+            var countDown = 5;
+            var countdownEl = document.getElementById("countdown");
+            countdownEl.innerText = countDown;
+            var timer = setInterval(function () {
+                countDown--;
+                countdownEl.innerText = countDown;
+                if (countDown < 1) {
+                    clearPage();
+                    clearInterval(timer);
+                    callback();
+                }
+            }, 1000);
+        }
+
+        function clearPage() {
+            // Remove countdown and winners divs
+            document.getElementById("countdown").innerText = 5;
+            document.getElementById("winners").innerText = "";
+        }
+
+        function showWinners(prizeList) {
+            document.getElementById("winners").innerText = "恭喜以下同志中奖：" + prizeList.join("、") + "。";
+        }
+
+        function Lottery() {
+            clearPage(); // Remove countdown and winners divs
+            var maxTryTimes = prompt("你要抽几位？最多六位哦");
+            if (isNaN(maxTryTimes) || maxTryTimes > 6 || maxTryTimes < 1) {
+                alert("只能是1-6位");
+                return;
+            }
+            // 提示用户抽奖即将开始
+            alert("现在即将开始抽奖，请按【确定】按钮进入下一步");
+
+            // 显示抽奖倒数计时和页面跳转
+            startCountdown(function () {
+                // 执行抽奖逻辑
+                doLottery(maxTryTimes);
+            });
+
+            function doLottery(maxTryTimes) {
+                // 保存抽奖参与者名单
+                var numbers = new Array(
+                    "叶佳泽",
+                    "李文锋",
+                    "林耿镖",
+                    "莫天泽",
+                    "张桂忠",
+                    "汤不凡"
+                );
+
+                // 随机抽取参与者，最多抽取3次，保证公正公平
+                var prizeList = [];
+                while (prizeList.length < maxTryTimes) {
+                    // 随机抽取一名参与者
+                    var index = Math.floor(Math.random() * numbers.length);
+                    var winner = numbers[index];
+
+                    // 判断该参与者是否已经中奖
+                    if (!prizeList.includes(winner)) {
+                        prizeList.push(winner);
+                    }
+                }
+
+                // 在新页面上显示中奖名单
+                showWinners(prizeList);
+            }
+        }
+    </script>
+
+    <button onclick="Lottery();">开始抽奖</button>
+</body>
+
+</html>

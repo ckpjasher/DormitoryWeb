@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=10, initial-scale=1.0">
+    <title>宿舍小功能</title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/format.css">
+    <link rel="stylesheet" type="text/css" href="css/bodyFormat.css">
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/wrap.css">
+    <link rel="stylesheet" type="text/css" href="css/title.css">
+</head>
+
+<body onload="titleInit()">
+    <div id="wrap">
+        <div id="main">
+            <div id="page1" class="page">
+                <div id="titleCenter">
+                    <div id="title">&nbsp;</div>
+                    <div id="subtitle">站长: 叶佳泽</div>
+                </div>
+            </div>
+            <div id="page2" class="page">
+                <header>
+                    <div class="nav">
+                        <ul>
+                            <li><a id="abc" href="#" style="text-decoration:none;" onclick="cale();">值日生</a></li>
+                            <li><a id="timetable" href="#" style="text-decoration:none;" onclick="timeTable();">课程表</a>
+                            </li>
+                            <li><a id="scoolmap" href="#" style="text-decoration:none;" onclick="scoolMap();">校园图</a>
+                            </li>
+                            <li><a id="ASCIITable" href="#" style="text-decoration:none;"
+                                    onclick="ASCIITable();">ASCII表</a></li>
+                            <li><a id="SchoolCalendar" href="#" style="text-decoration:none;"
+                                    onclick="SchoolCalendar();">校日历</a></li>
+                            <li><a id="WeekCale" href="#" style="text-decoration:none;" onclick="WeekCale();">查周数</a>
+                            </li>
+                            <li><a id="Lottery" href="#" style="text-decoration:none;" onclick="Lottery();">抽人</a></li>
+                        </ul>
+                        <div id="floatClear"></div>
+                    </div>
+                </header>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript" src="js/Warp.js"></script>
+<script src="js/Title.js"></script>
+<script src="js/DormitoryCale.js"></script>
+</html>

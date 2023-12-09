@@ -1,0 +1,15 @@
+#abc,
+#timetable,
+#scoolmap,
+#ASCIITable,
+#SchoolCalendar,
+#WeekCale,
+#Lottery {
+    border-radius: 25px;
+    background: #8AC007;
+    padding: 20px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+}
